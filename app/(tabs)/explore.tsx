@@ -1,8 +1,8 @@
-import React from 'react';
-import { StyleSheet, View, Text, Platform } from 'react-native';
-import MapView, { Marker, Callout } from 'react-native-maps';
-import { mockKosList } from '../../constants/mockData';
 import { useRouter } from 'expo-router';
+import React from 'react';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+import MapView, { Callout, Marker } from 'react-native-maps';
+import { mockKosList } from '../../constants/mockData';
 
 // Dummy coordinates since mockData only has address string
 const DUMMY_COORDS = [
@@ -50,7 +50,7 @@ export default function ExploreScreen() {
                 <View style={styles.calloutContainer}>
                   <Text style={styles.calloutTitle}>{kos.title}</Text>
                   <Text style={styles.calloutPrice}>{kos.price}</Text>
-                  <Text style={styles.calloutLink}>Lihat Detail ></Text>
+                  <Text style={styles.calloutLink}>Lihat Detail </Text>
                 </View>
               </Callout>
             </Marker>
